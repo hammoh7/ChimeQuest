@@ -7,7 +7,11 @@
    ```
    npm install
    ```
-3. Then run the development server:
+3. Create a .env file:
+   ```
+   DATABASE_URL=""
+   ```  
+4. Then run the development server:
    ```bash
    npm run dev
    # or
