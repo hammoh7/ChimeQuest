@@ -8,10 +8,14 @@
    npm install
    ```
 3. Create a .env file:
+   Write your MongoDB URL and Clerk API keys
    ```
    DATABASE_URL=""
+
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
    ```  
-4. Then run the development server:
+5. Then run the development server:
    ```bash
    npm run dev
    # or
