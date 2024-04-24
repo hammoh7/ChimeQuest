@@ -2,36 +2,34 @@
 ### Development in Progress
 
 ## Getting Started
-1. Clone the project
+1. Clone the project by using below command:
+   ```
+   git clone https://github.com/hammoh7/ChimeQuest.git
+   ```
 2. Run the command:
    ```
    npm install
    ```
-3. Create a .env file:
-   Write your MongoDB URL, Clerk and Uploadthing API keys
+3. Create a .env file, and paste the required keys and URL:
+   <br />
+   I have used Clerk (for authentication), MongoDB (for database) and Uploadthing (for file upload functionality)
    ```
    DATABASE_URL=""
 
    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
    CLERK_SECRET_KEY=
 
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/signin
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/signup
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
    UPLOADTHING_SECRET=
    UPLOADTHING_APP_ID=
    ```
-4. Run the following commands for prisma setup:
+4. Then run the development server:
    ```
-   npx prisma generate
-   npx prisma db push
-   ```  
-5. Then run the development server:
-   ```bash
    npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
    ```
 
-Open (http://localhost:3000) with your browser to see the result.
+5. Open (http://localhost:3000) with your browser to see the result.
