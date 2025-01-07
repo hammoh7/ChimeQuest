@@ -26,9 +26,9 @@ export const SocketProvider = ({
     const [isConnected, setIsConnected] = useState(false);
 
     useEffect(() => {
-        const socketInstance = new (ClientIO as any)(process.env.DEPLOY_SITE_URL!, {    // Deployment URL in .env
+        const socketInstance = new (ClientIO as any)(process.env.NEXT_PUBLIC_SITE_URL!, {    
             path: "/api/socket/io",
-            // addTrailingSlash: false,
+            addTrailingSlash: false,
         })  
         socketInstance.on("connect", () => {
             setIsConnected(true);

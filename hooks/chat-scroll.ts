@@ -15,7 +15,7 @@ export const ChatScroll = ({
     loadMore,
     count,
 }: ChatScrollProps) => {
-    const [hasInitialized, setHasInitialized] = useState();
+    const [hasInitialized, setHasInitialized] = useState<boolean>(false);
 
     useEffect(() => {
         const topDiv = chatRef?.current;
